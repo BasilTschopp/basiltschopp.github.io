@@ -1,6 +1,6 @@
 
 const GITHUB_USER = "BasilTschopp";
-const EXCLUDE = ["BasilTschopp.github.io"];          
+const EXCLUDE = ["basiltschopp.github.io"];          
 const FALLBACK = [
   ["we-will-see", "Test automation for web applications."],
   ["py-document-kit", "Split and merge documents locally using a standalone executable."]
