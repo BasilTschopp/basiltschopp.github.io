@@ -1,0 +1,80 @@
+:root{
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Inter,system-ui,sans-serif;
+  --bg:#141413;
+  --surface:#1f1e1d;
+  --surface-2:#2a2927;
+  --line:#3a3936;
+  --text:#ece9e2;
+  --dim:#9a968c;
+  --accent:#7cc4a6;
+  --accent-soft:rgba(124,196,166,.12);
+  --radius:14px;
+  --max:960px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--text);
+  font-family:var(--font);-webkit-font-smoothing:antialiased;
+  font-size:16px;line-height:1.6;
+}
+h1,h2,h3{font-family:var(--font);font-weight:600;line-height:1.1;letter-spacing:-.022em}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--accent);color:var(--bg)}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+/* ==== Navigation ==== */
+nav{
+  position:sticky;top:0;z-index:10;
+  background:var(--bg);color:var(--text);
+}
+nav .wrap{display:flex;align-items:center;justify-content:flex-end;height:64px}
+.logo{font-family:var(--font);font-weight:600;letter-spacing:-.01em;font-size:18px;display:flex;align-items:center;gap:10px}
+.logo .mono{font-weight:700;letter-spacing:-.04em}
+.logo .dot{color:var(--accent)}
+
+/* ==== Abschnitte ==== */
+section{padding:32px 0}
+.head{margin-bottom:14px}
+.head > div{display:flex;align-items:baseline;gap:12px}
+.head h2{font-size:19px;font-weight:700;text-transform:uppercase;letter-spacing:.1em}
+.head p{color:var(--dim);max-width:420px}
+
+/* Projekte */
+.projects{list-style:none;padding-left:28px}
+.projects li{position:relative;padding-bottom:12px}
+.projects li:last-child{padding-bottom:0}
+.projects a{font-family:var(--font);font-weight:600;font-size:18px;display:inline-flex;gap:8px;align-items:center}
+.projects p{color:var(--dim);font-size:15px;margin-top:2px}
+
+/* Bildung & Projekte: Liste mit leeren Checkboxen */
+.timeline{padding-left:28px}
+.entry{position:relative;padding-bottom:12px;display:flex;flex-direction:column}
+.entry:last-child{padding-bottom:0}
+.entry::before, .projects li::before{
+  content:"";position:absolute;left:-28px;top:6px;width:16px;height:16px;border-radius:50%;box-sizing:border-box;
+  border:2px solid var(--accent);transition:background .15s;
+}
+.projects li:hover::before{background:var(--accent)}
+.entry h3{font-size:18px;line-height:1.6}
+.entry .when{order:2;font-size:15px;color:var(--dim);margin-top:2px}
+
+/* Kontakt */
+.links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.links{gap:12px!important}
+.links a{display:inline-flex;align-items:flex-start;gap:12px;color:var(--text);transition:color .15s}
+.links .t{display:block;font-size:18px;font-weight:600;line-height:1.1;letter-spacing:-.022em}
+.links small{display:block;color:var(--dim);font-size:15px;margin-top:4px}
+.links svg *{transition:stroke-width .15s}
+.links a:hover svg *{stroke-width:3}
+.links svg{width:16px;height:16px;flex:none;color:var(--accent);margin-top:2px}
+
+@media (max-width:760px){
+  section{padding:24px 0}
+
+}
+@media (max-width:440px){
+  .wrap{padding:0 16px}
+}
+
+@media (min-width:1200px){ body{zoom:1.2} }
