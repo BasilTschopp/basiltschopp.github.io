@@ -59,7 +59,7 @@ section{padding:32px 0}
 .entry h3{font-size:18px;line-height:1.6}
 .entry .when{order:2;font-size:15px;color:var(--dim);margin-top:2px}
 
-/* Kontakt */
+/* Links */
 .links{list-style:none;display:flex;flex-direction:column;gap:10px}
 .links{gap:12px!important}
 .links a{display:inline-flex;align-items:flex-start;gap:12px;color:var(--text);transition:color .15s}
